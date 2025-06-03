@@ -1,0 +1,65 @@
+# Entornos virtuales
+env/
+venv/
+.venv/
+DeepFaceEnv/
+ENV/
+env.bak/
+venv.bak/
+
+# Archivos de Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de logs y debugging
+*.log
+
+# Archivos de entorno y configuración
+.env
+
+# Archivos de instalación/paquetes
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+.eggs/
+
+# Información de cobertura de tests
+.coverage
+*.cover
+coverage.xml
+.cache/
+nosetests.xml
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Archivos de bases de datos y temporales
+*.sqlite3
+*.db
+*.bak
+
+# Archivos específicos de DeepFace / Tensorflow
+*.pb
+*.h5
+checkpoints/
+logs/
+
+# Archivos de modelos descargados (si los guardas localmente)
+models/
+weights/
+
+# Datos (si quieres ignorarlos)
+d
