@@ -63,3 +63,7 @@ weights/
 
 # Datos (si quieres ignorarlos)
 d
+
+
+# Carpetas de datos temporales
+temp/
