@@ -50,11 +50,20 @@ def activar_camara(n):
         cv2.imshow("Video", frame)
         if contador_frames % 50 == 0:
             frame_guardado = guardar_frames("fotos",frame)
-            resultado = DeepFace.find(frame_guardado, db_path="data", model_name="Facenet512", enforce_detection=False)
+        #    deteccion = DeepFace.extract_faces(frame, detector_backend="yunet", enforce_detection=False)
+        #    if deteccion is None:
+        #        print("No se detectó rostro en el frame.")
+        #        shutil.move(frame_guardado, os.path.join("fotos", "temp", os.path.basename(frame_guardado)))
+        #    else:
+        #        print("Rostro detectado, guardando frame.")
+        #        shutil.move(frame_guardado, os.path.join("fotos", "detecciones", os.path.basename(frame_guardado)))
+
+            resultado = DeepFace.find(frame_guardado, db_path="data", model_name="SFace", enforce_detection=False)
+            print("Resultado:", resultado[0])
+            #print("Mas info de resultado:", resultado[0].iloc[0]["identity"])
             if resultado[0].empty:
                 print("No se encontró coincidencias.")
                 shutil.move(frame_guardado, os.path.join("fotos", "temp", os.path.basename(frame_guardado)))
-
                 #mover_a_carpeta(frame_guardado, "fotos\temp")
             else:
                 print("Reconocido:", resultado[0].iloc[0]["identity"])
